@@ -18,15 +18,43 @@ body{
     grid-template-rows: 2fr 3fr;
 }
 
-.upper-header{
+.upper-header,
+.lower-header{
     display: flex;
     justify-content: space-between;
-    justify-items: center;
-    align-content: center;
+    align-items: center;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     
 }
 
+.right-icons{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
 
+.button-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+button{
+    width: 5.5rem;
+    height: 2.5rem;
+    border: solid;
+    border-radius: 50px;
+
+}
+
+.user-wrapper{
+    display: flex;
+    gap: 0.5rem;
+}
+.user-wrapper>div{
+    display: flex;
+    flex-direction: column;
+}
 .content{
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -73,3 +101,4 @@ body{
 .left-pannel>div>div{
     margin-bottom: 1.5rem;
 }
+
