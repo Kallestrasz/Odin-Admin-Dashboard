@@ -122,4 +122,13 @@ button{
 .left-pannel>div>div{
     margin-bottom: 1.5rem;
 }
-
+@media (max-width: 480px){
+    .content{
+        display: flex;
+        flex-direction: column;
+    }
+    .project-list{
+        display: flex;
+        flex-direction: column;
+    }
+    }
