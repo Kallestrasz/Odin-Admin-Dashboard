@@ -188,8 +188,21 @@ button{
         grid-template-rows: initial;
     }
 }
-@media (max-width: 480px){
-    .nav-icon{
+@media (max-width: 800px){
+    .nav-text{
         display: none 
     }
+    .nav-primary, .nav-secondary{
+        padding: 16px;
+        margin: 0;
+    }
+    .navigation-panel img{
+        width: 32px;
+        margin: 0;
+    }
+    #dashboard{
+        width: 32px;
+        margin: 0;
+    }
+    
 }
