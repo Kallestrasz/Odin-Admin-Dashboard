@@ -6,63 +6,100 @@ body{
     display: grid;
     margin: 0;
     min-height: 100vmin;
+    max-height: 100vmin;
     font-family: Roboto, sans-serif; 
     overflow-x: hidden;
     overflow-y: auto;
     grid-template-columns: 12fr 88fr;
-    grid-template-rows: 1fr 6fr;
+    grid-template-rows: 1fr 10fr;
+   
 }
 
 .header{
+    padding: 2rem;
+    padding-top: 1rem;
     display: grid;
     grid-template-rows: 2fr 3fr;
+    gap: 2rem;
     box-shadow: 0px 2px 3px rgb(175, 175, 175);
 }
 
 .upper-header,
 .lower-header{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 10fr  1fr;
     align-items: center;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    
+} 
+
+.upper-header{
+    grid-template-columns: 4fr  1fr;
 }
 
-.right-icons{
-    display: flex;
+.name-container{
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    font-size: small;
+    font-weight: bold;
+    align-items:center;
+}
+
+.username{
+    font-weight: bolder;
+    font-size: 1.8rem;
+}
+
+.header-icon-container{
+    display: grid;
     align-items: center;
+    grid-template-columns: 1fr 1fr 3fr;
     gap: 1rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    justify-items: center;
+}
+
+#upper-user-profile{
+    width: 48px;
+    height: 48px;
 }
 
 .button-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
+    padding-top: 0.4rem;
 }
 
 button{
-
     color: white;
-    font-weight: 500;
+    font-weight: bolder;
+    font-size: 1rem;
     background-color: #0EA5E9;
-    width: 75px;
-    height: 30px;
-    border-radius: 15px;
+    width: 125px;
+    height: 50px;
+    border-radius: 25px;
     border: none;
     margin-bottom: 5px;
     margin-right: 10px;
-
 }
 
 .user-container{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 100fr;
     gap: 0.5rem;
+    align-items:center;
 }
 
-.user-container>div{
-    display: flex;
-    flex-direction: column;
+.title-container{
+    display: grid;
+    grid-template-columns: 10fr 1fr;
+    padding-left: 2rem;
+    padding-top: 1rem;
+    padding-right: 12.5rem;
+    align-items: center;
+    justify-content: end;
+    font-size: 1.4rem;
+    font-weight: 900;
 }
 
 .content{
@@ -73,8 +110,7 @@ button{
 .card{
     border-radius: 0.5rem;
     box-shadow: 2px 3px 5px rgb(175, 175, 175);
-    display: flex;
-    flex-direction: column;
+    display: grid;
 }
 
 .card-title{
@@ -83,14 +119,14 @@ button{
 }
 
 .card-icon-container{
-    align-self: flex-end;
+    justify-self: end;
 }
 
 .project{
     padding-left: 1.5rem;
     padding-right: 1rem;
-    padding-bottom: 1rem;
     border-left: 10px solid  #fbbf24;
+    grid-template-rows: 3rem 2fr 3rem;
 }
 
 .announcements,
@@ -107,6 +143,12 @@ button{
     font-weight: bold;
 }
 
+.announcements-container{
+    box-shadow: 0px 1px 3px rgb(175, 175, 175);
+}
+#last-announcements-container{
+    box-shadow: initial;
+}
 .project-container{
     display: grid;
     grid-template-rows: repeat(3, 1fr);
@@ -116,11 +158,42 @@ button{
 }
 
 .misc-container{
-    
     display: grid;
     grid-template-rows: 1fr 1fr;
     gap: 2rem;
     padding: 2rem;
+}
+.trending-wrapper{
+    display: grid;
+    grid-template-rows: 3rem 1fr;
+}
+.trending-wrapper>span{
+    font-size: 1.4rem;
+    font-weight: 900;
+    padding-left: 1rem;
+}
+
+.trending-profile{
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    gap: 1.5rem;
+    align-items:center;
+}
+
+.trending-profile-icon{
+    width: 48px;
+    height: 48px;
+}
+
+.trending-profile-info{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-items:center;
+    gap: 0.5rem;
+}
+
+.card-text, .announcements-description, .trending-project{
+    color: #52525b;
 }
 
 
@@ -161,19 +234,20 @@ button{
     width: 48px;
 }
 
-.header-icons{
+.header-icon{
     width: 32px;
+    height: 32px;
 }
-#user-profile{
+
+#lower-user-profile{
     width: 64px;
+    height: 64px;
 }
 
 .project-icon{
     width: 24px;
     margin-left: 10px;
 }
-
-
 
 @media (max-width: 1080px){
     .content{
@@ -186,6 +260,14 @@ button{
     }
     body{
         grid-template-rows: initial;
+    }
+    .title-container{
+        display: none;
+    }
+    .trending-profile-info{
+        grid-template-rows: initial;
+        grid-template-columns: 4rem 1fr;
+        gap: 4rem;
     }
 }
 @media (max-width: 800px){
@@ -204,5 +286,5 @@ button{
         width: 32px;
         margin: 0;
     }
-    
+   
 }
