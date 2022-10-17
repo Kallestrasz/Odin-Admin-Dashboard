@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
-
 body{
     overflow: hidden;
     display: grid;
@@ -30,9 +29,22 @@ body{
     grid-template-columns: 10fr  1fr;
     align-items: center;
 } 
-
 .upper-header{
     grid-template-columns: 4fr  1fr;
+}
+
+.search-container{
+    display: grid;
+    grid-template-columns: 1fr 30fr;
+    padding-right: 1rem;
+    align-items: center;
+}
+
+#search-bar{
+    border: none;
+    outline: 0;
+    font-size: 1rem;
+    padding-bottom: 0.4rem;
 }
 
 .name-container{
