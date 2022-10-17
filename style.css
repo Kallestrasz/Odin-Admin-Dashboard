@@ -43,7 +43,7 @@ body{
 #search-bar{
     border: none;
     outline: 0;
-    font-size: 1rem;
+    font-size: 1.5rem;
     padding-bottom: 0.4rem;
 }
 
@@ -211,27 +211,27 @@ button{
     font-weight: bolder;
 }
 
-.nav-title,.nav-point{
+.navigation-panel>div>div{
+    margin-bottom: 1.5rem;
+}
+
+.navigation-title,.navigation-point{
     display: grid;
     grid-template-columns: 1fr 10fr;
     align-items:center;
 }
 
-.nav-title{
+.navigation-title{
     padding: 1rem;
     padding-right: 2rem;
     font-size: 1.5rem;
 }
 
-.nav-primary, .nav-secondary{
+.navigation-primary-container, .navigation-secondary-container{
     padding: 2rem;
 }
 
-.navigation-panel>div>div{
-    margin-bottom: 1.5rem;
-}
-
-.nav-icon{
+.navigation-icon{
     width: 32px;
     margin-right: 1rem;
     filter: invert(100%);
@@ -270,10 +270,10 @@ button{
 }
 
 @media (max-width: 800px){
-    .nav-text{
+    .navigation-text{
         display: none 
     }
-    .nav-primary, .nav-secondary{
+    .navigation-primary-container, .navigation-secondary-container{
         padding: 16px;
         margin: 0;
     }
