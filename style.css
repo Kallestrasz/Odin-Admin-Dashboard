@@ -128,6 +128,7 @@ button:active {
 h2 {
     font-size: 1.4rem;
     font-weight: 900;
+    margin: 0;
 }
 
 .card {
@@ -185,7 +186,6 @@ h2 {
     display: grid;
     grid-template-rows: 1fr 1fr;
     gap: 2rem;
-    padding: 2rem 2rem 2rem 0;
 }
 
 .trending-wrapper {
