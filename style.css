@@ -179,7 +179,7 @@ button:active {
     display: grid;
     grid-template-rows: 1fr 1fr;
     gap: 2rem;
-    padding: 2rem;
+    padding: 2rem 2rem 2rem 0;
 }
 
 .trending-wrapper {
