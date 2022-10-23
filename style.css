@@ -160,7 +160,11 @@ button:active {
 }
 
 .announcements-container {
-    box-shadow: 0px 1px 3px rgb(175, 175, 175);
+    border-bottom: 1px solid rgb(175, 175, 175);
+}
+
+.announcements-container:last-child {
+    border: none;
 }
 
 .project-container {
